@@ -1,0 +1,24 @@
+body {
+  background-color: #222c3b;
+  font-family: "Nova Mono", monospace;
+  /* background: linear-gradient(to right, #373B44,#4286f4); */
+  background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+}
+
+.main-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tracker-body {
+  border: 1px solid white;
+  width: 800px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 35px;
+  border-radius: 12px;
+}
