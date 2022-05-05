@@ -1,24 +1,112 @@
 body {
   background-color: #222c3b;
-  font-family: "Nova Mono", monospace;
-  /* background: linear-gradient(to right, #373B44,#4286f4); */
+  font-family: "ABeeZee", sans-serif;
+  color: white;
+  letter-spacing: 1.5px;
   background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
 }
 
-.main-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Card Styles */
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.486);
 }
 
-.tracker-body {
+/* Expenses Styles */
+
+.expenses {
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
   border: 1px solid white;
-  width: 800px;
-  height: 500px;
+}
+
+/* Expense Item  Styles*/
+
+.expense-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  /* frosted glass bg */
+  background: rgba(255, 255, 255, 0.07);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.025);
+}
+
+.expense-item__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-flow: column-reverse;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.expense-item h2 {
+  font-size: 1rem;
+  flex: 1;
+  margin: 0 1rem;
   color: white;
-  font-size: 35px;
+}
+
+.expense-item__price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem;
   border-radius: 12px;
+  background-color: transparent;
+}
+
+/* expense date */
+
+.expense-date {
+  display: flex;
+  flex-direction: column;
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 1px solid #ececec;
+  color: white;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.expense-date__month {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.expense-date__year {
+  font-size: 0.75rem;
+}
+
+.expense-date__day {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (min-width: 580px) {
+  .expense-item__description {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  .expense-item__description h2 {
+    font-size: 1.25rem;
+  }
+
+  .expense-item__price {
+    font-size: 1.25rem;
+    padding: 0.5rem 1.5rem;
+  }
 }
